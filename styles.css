@@ -1,0 +1,30 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  color: #111319;
+  background: #f4ecd0;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: inherit; }
+.skip-link { position: absolute; left: -9999px; }
+.skip-link:focus { left: 1rem; top: 1rem; padding: .75rem; background: white; }
+.site-header { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: 1rem 5vw; background: white; border-bottom: 2px solid; }
+.brand { font-weight: 800; text-decoration: none; }
+nav { display: flex; flex-wrap: wrap; gap: 1rem; }
+nav a { font-weight: 700; }
+main { width: min(1120px, 90vw); margin: 0 auto; }
+.hero { min-height: 55vh; display: grid; align-content: center; padding: 4rem 0; }
+.eyebrow { text-transform: uppercase; letter-spacing: .12em; font-weight: 800; }
+h1 { max-width: 15ch; margin: 0; font-size: clamp(3rem, 9vw, 7rem); line-height: .9; }
+.button { width: fit-content; margin-top: 1rem; padding: .8rem 1rem; border: 2px solid; border-radius: 999px; background: #111319; color: white; text-decoration: none; font-weight: 800; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; padding-bottom: 4rem; }
+article { min-height: 10rem; padding: 1.5rem; border: 2px solid; border-radius: 1.5rem; background: #fffdf7; }
+footer { padding: 2rem 5vw; border-top: 2px solid; background: white; }
+
+@media (max-width: 700px) {
+  .site-header { align-items: flex-start; flex-direction: column; }
+  .grid { grid-template-columns: 1fr; }
+}
